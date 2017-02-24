@@ -23,7 +23,7 @@ The final parameters were:
 
 >  **Region Selection**
 
- Canny detector finds edges in high contrast areas. Therefore, the edge points shown above does not only limit to the lane line. In order to remove edges generator from the surrounding scenery, a quadrilateral region was selected as the mask as shown below. 
+ Canny detector finds edges in high contrast areas. Therefore, the edge points shown above does not only limit to the lane line. In order to remove edges generated from the surrounding scenery, a quadrilateral region was selected as the mask as shown below. 
 
 ![enter image description here](https://lh3.googleusercontent.com/-DF2TmbGtedA/WK6c2fcG2AI/AAAAAAAAyi0/EMdDcs96RgsAxYErwa8Wyl4GaDBhulPDACLcB/s0/masked_canny.png "Region selected version of the Canny image")
 
@@ -53,7 +53,8 @@ After converting points to potential lines, a gradient based filter mechanism wa
 
 The distribution shows clearly the 2 peaks, which correspond to the 2 lane lines. Conveniently the peaks are on the either side of the `gradient = 0` line. This information is used to separate the lines into left and right groups. Also, the mean and standard deviation of the respective groups is used to identify to 'band-pass' of gradients.
 
-This is similar to training the system. In the first pass (or the initialization), the pipeline only continues till hough lines generation stage. It collects the line gradient distribution data to calibration the gradient band-pass parameters and the system is ready to go. This can be avoid from the actually pipeline by hard coding the parameters. However, in my implementation I've kept it there.
+This is similar to training the system. In the first pass (or the initialization), the pipeline only continues till hough lines generation stage. It collects the line gradient distribution data to calibration the gradient band-pass parameters and the system is ready to go. This can be avoid from the actually pipeline by hard coding the parameters. However, in my implementation I've kept it there. 
+
 
 > **Create single line**
 

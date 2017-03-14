@@ -1,0 +1,9 @@
+[submodule "term1/Lessons/CarND-TensorFlow-Lab"]
+	path = term1/Lessons/CarND-TensorFlow-Lab
+	url = https://github.com/jabeerahmed/CarND-TensorFlow-Lab.git
+[submodule "term1/Lessons/CarND-LeNet-Lab"]
+	path = term1/Lessons/CarND-LeNet-Lab
+	url = https://github.com/jabeerahmed/CarND-LeNet-Lab.git
+[submodule "term1/project2"]
+	path = term1/Projects/project2
+	url = https://github.com/jabeerahmed/CarND-Traffic-Sign-Classifier-Project.git
